@@ -13,11 +13,11 @@ def user_input():
 def stock_info():
     import requests
     stocks = user_input()
+    string = ""
     for stock in stocks:
-        print(stock)
         r = requests.get(f'https://finnhub.io/api/v1/quote?symbol={stock}&token=c0h17e748v6ttm1suvl0')
-        print(r.json())
-        print()
+        string = string + (f'{stock}\n{r.json()}\n')
+    return string
 
 
     """ import time
@@ -27,7 +27,7 @@ def stock_info():
         time.sleep(1800.0 - ((time.time() - starttime) % 1800.0)) """
 
 
-stock_info()
+send_discord_message(stock_info())
 
 
 
