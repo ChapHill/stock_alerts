@@ -5,7 +5,7 @@ def send_discord_message(message):
     reponse = webhook.execute()
 
 def user_input():
-    n = str(input("Enter the number of companies you would like to track for the day separated by commas: ")).replace(' ', '')
+    n = str(input("Enter the stock symbols you would like to track for the day separating them with commas: ")).replace(' ', '')
     stocks = n.split(",")
     return stocks
     
@@ -16,7 +16,7 @@ def stock_info():
     string = ""
     for stock in stocks:
         r = requests.get(f'https://finnhub.io/api/v1/quote?symbol={stock}&token=c0h17e748v6ttm1suvl0')
-        string = string + (f'{stock}\n{r.json()}\n')
+        string = string + f"{stock}\nPrevious close: {r.json()['pc']}\nCurrent price: {r.json()['c']}\nPrecent change: {str(round((r.json()['c'] - r.json()['pc']) / r.json()['pc'] * 100, 2))}\n\n"
     return string
 
 
