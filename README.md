@@ -19,4 +19,4 @@ To start, the program will ask you which companies you would like to track for t
 ```sh
 TSLA,AAPL,AMZN,MSFT
 ```
-The Program will continue to run until it is cancelled by the user or the time reaches 21:00 (UTC)
+The Program will continue to run until it is cancelled by the user or if the time is outside market hours 14:30 - 21:00 (UTC)
