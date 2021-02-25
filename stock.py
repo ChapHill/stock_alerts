@@ -21,10 +21,18 @@ def stock_info():
 
 def run_continuously(time_in_seconds):
     import time
+    from datetime import datetime
+
+    now = datetime.utcnow()
+    market_open = now.replace(hour=14, minute=30, second=0, microsecond=0)
+    market_close = now.replace(hour=21, minute=0, second=0, microsecond=0)
     starttime = time.time()
     while True:
-        send_discord_message(stock_info())
-        time.sleep(time_in_seconds - ((time.time() - starttime) % time_in_seconds))
+        if now >= market_open and now <= market_close:
+            send_discord_message(stock_info())
+            time.sleep(time_in_seconds - ((time.time() - starttime) % time_in_seconds))
+        else:
+            exit()
 
 stocks = user_input()
 run_continuously(1800)
