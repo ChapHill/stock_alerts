@@ -2,7 +2,7 @@
 Program that allows you to track the current & previous close price of a given company's shares every 30 minutes and send that information to a Discord channel.
 
 # Why?
-What is the point of this program when you can literally open up your favorite stock trading app and view detailed information about a given share? 
+What is the point of this program when you can literally open up your favorite stock trading app and view detailed information about a given share? To limit the number of times you are picking up your phone or viewing websites. Looking at stocks can get addicting fairly quickly when you have money invested within the market. Looking at stock prices Monday-Friday can suddenly increase your phone pick-ups, unlocks and usage subtantially. This program aims to limit that to twice per hour giving you the current price and percent change from it's pervious close every 30 minutes.
 
 # Requirements
 Install package
