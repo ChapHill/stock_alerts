@@ -9,6 +9,7 @@ Install package
 ```sh
 pip install discord-webhook
 ```
+
 A [Finhubb.io](https://finnhub.io/) account for a free API key
 
 
