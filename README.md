@@ -13,3 +13,9 @@ pip install discord-webhook
 A [Finhubb.io](https://finnhub.io/) account for a free API key
 
 A Discord account, channel and [Webhook](https://support.discord.com/hc/en-us/articles/228383668-Intro-to-Webhooks)
+
+# Usage
+To start, the program will ask you which companies you would like to track for the day. Enter each company using their stock symbol in a comma separated manner. 
+```sh
+TSLA,AAPL,AMZN,MSFT
+```
