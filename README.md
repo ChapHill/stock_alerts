@@ -12,5 +12,4 @@ pip install discord-webhook
 
 A [Finhubb.io](https://finnhub.io/) account for a free API key
 
-
-
+A Discord account, channel and [Webhook](https://support.discord.com/hc/en-us/articles/228383668-Intro-to-Webhooks)
